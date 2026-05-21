@@ -17,6 +17,10 @@
 
 const SCALES = [
 
+  // ══════════════════════════════════════════════════════════
+  //  ORIGINAL SCALES
+  // ══════════════════════════════════════════════════════════
+
   // ── SIZE ──────────────────────────────────────────────────
   {
     id: 'size',
@@ -345,6 +349,1455 @@ const SCALES = [
       { w: 'indomitable',   z: 5, r: 5 },
       { w: 'lionhearted',   z: 5, r: 4 },
       { w: 'unflinching',   z: 5, r: 4 },
+    ]
+  },
+
+
+  // ══════════════════════════════════════════════════════════
+  //  PERSUASIVE WRITING
+  // ══════════════════════════════════════════════════════════
+
+  // ── PERSUASION STRENGTH (verb) ───────────────────────────
+  {
+    id: 'persuading-verb',
+    category: 'Persuasion',
+    type: 'verb',
+    left: 'hinting',
+    right: 'demanding',
+    words: [
+      { w: 'implying',      z: 1, r: 3 },
+      { w: 'suggesting',    z: 1, r: 2 },
+      { w: 'insinuating',   z: 1, r: 4 },
+      { w: 'mentioning',    z: 2, r: 1 },
+      { w: 'proposing',     z: 2, r: 2 },
+      { w: 'recommending',  z: 2, r: 2 },
+      { w: 'advising',      z: 2, r: 2 },
+      { w: 'arguing',       z: 3, r: 1 },
+      { w: 'contending',    z: 3, r: 3 },
+      { w: 'asserting',     z: 3, r: 3 },
+      { w: 'maintaining',   z: 3, r: 3 },
+      { w: 'insisting',     z: 4, r: 2 },
+      { w: 'urging',        z: 4, r: 2 },
+      { w: 'imploring',     z: 4, r: 3 },
+      { w: 'beseeching',    z: 4, r: 4 },
+      { w: 'exhorting',     z: 4, r: 5 },
+      { w: 'compelling',    z: 5, r: 3 },
+      { w: 'commanding',    z: 5, r: 2 },
+      { w: 'dictating',     z: 5, r: 3 },
+      { w: 'mandating',     z: 5, r: 4 },
+      { w: 'decreeing',     z: 5, r: 5 },
+    ]
+  },
+
+  // ── AGREEMENT → OPPOSITION (adj) ─────────────────────────
+  {
+    id: 'agreement',
+    category: 'Agreement',
+    type: 'adj',
+    left: 'compliant',
+    right: 'defiant',
+    words: [
+      { w: 'obedient',      z: 1, r: 2 },
+      { w: 'submissive',    z: 1, r: 3 },
+      { w: 'acquiescent',   z: 1, r: 5 },
+      { w: 'amenable',      z: 1, r: 4 },
+      { w: 'agreeable',     z: 2, r: 2 },
+      { w: 'cooperative',   z: 2, r: 2 },
+      { w: 'willing',       z: 2, r: 1 },
+      { w: 'receptive',     z: 2, r: 3 },
+      { w: 'neutral',       z: 3, r: 1 },
+      { w: 'ambivalent',    z: 3, r: 4 },
+      { w: 'undecided',     z: 3, r: 2 },
+      { w: 'hesitant',      z: 3, r: 2 },
+      { w: 'reluctant',     z: 4, r: 2 },
+      { w: 'resistant',     z: 4, r: 2 },
+      { w: 'opposed',       z: 4, r: 2 },
+      { w: 'obstinate',     z: 4, r: 3 },
+      { w: 'recalcitrant',  z: 4, r: 5 },
+      { w: 'rebellious',    z: 5, r: 2 },
+      { w: 'insubordinate', z: 5, r: 4 },
+      { w: 'intransigent',  z: 5, r: 5 },
+      { w: 'refractory',    z: 5, r: 5 },
+      { w: 'contumacious',  z: 5, r: 5 },
+    ]
+  },
+
+  // ── LANGUAGE STRENGTH (adj) ───────────────────────────────
+  {
+    id: 'language-strength',
+    category: 'Language',
+    type: 'adj',
+    left: 'vague',
+    right: 'forceful',
+    words: [
+      { w: 'ambiguous',     z: 1, r: 3 },
+      { w: 'unclear',       z: 1, r: 1 },
+      { w: 'woolly',        z: 1, r: 3 },
+      { w: 'nebulous',      z: 1, r: 5 },
+      { w: 'wishy-washy',   z: 1, r: 2 },
+      { w: 'tentative',     z: 2, r: 3 },
+      { w: 'hesitant',      z: 2, r: 2 },
+      { w: 'measured',      z: 2, r: 3 },
+      { w: 'moderate',      z: 3, r: 1 },
+      { w: 'direct',        z: 3, r: 1 },
+      { w: 'plain',         z: 3, r: 1 },
+      { w: 'clear',         z: 3, r: 1 },
+      { w: 'firm',          z: 4, r: 1 },
+      { w: 'emphatic',      z: 4, r: 3 },
+      { w: 'assertive',     z: 4, r: 3 },
+      { w: 'unequivocal',   z: 4, r: 5 },
+      { w: 'compelling',    z: 5, r: 3 },
+      { w: 'powerful',      z: 5, r: 1 },
+      { w: 'commanding',    z: 5, r: 2 },
+      { w: 'authoritative', z: 5, r: 4 },
+      { w: 'incisive',      z: 5, r: 4 },
+      { w: 'trenchant',     z: 5, r: 5 },
+    ]
+  },
+
+  // ── CRITICISING (verb) ────────────────────────────────────
+  {
+    id: 'criticising-verb',
+    category: 'Criticising',
+    type: 'verb',
+    left: 'questioning',
+    right: 'condemning',
+    words: [
+      { w: 'querying',      z: 1, r: 3 },
+      { w: 'doubting',      z: 1, r: 2 },
+      { w: 'probing',       z: 1, r: 3 },
+      { w: 'challenging',   z: 2, r: 2 },
+      { w: 'disputing',     z: 2, r: 3 },
+      { w: 'contesting',    z: 2, r: 3 },
+      { w: 'criticising',   z: 3, r: 2 },
+      { w: 'censuring',     z: 3, r: 4 },
+      { w: 'rebuking',      z: 3, r: 4 },
+      { w: 'reproaching',   z: 3, r: 4 },
+      { w: 'attacking',     z: 4, r: 2 },
+      { w: 'denouncing',    z: 4, r: 3 },
+      { w: 'lambasting',    z: 4, r: 4 },
+      { w: 'vilifying',     z: 4, r: 5 },
+      { w: 'excoriating',   z: 5, r: 5 },
+      { w: 'castigating',   z: 5, r: 5 },
+      { w: 'damning',       z: 5, r: 3 },
+      { w: 'denouncing',    z: 5, r: 3 },
+    ]
+  },
+
+
+  // ══════════════════════════════════════════════════════════
+  //  POLITICAL SYSTEMS
+  // ══════════════════════════════════════════════════════════
+
+  // ── GOVERNMENT CONTROL (adj) ──────────────────────────────
+  {
+    id: 'government-control',
+    category: 'Government',
+    type: 'adj',
+    left: 'anarchic',
+    right: 'totalitarian',
+    words: [
+      { w: 'lawless',       z: 1, r: 2 },
+      { w: 'ungoverned',    z: 1, r: 3 },
+      { w: 'chaotic',       z: 1, r: 2 },
+      { w: 'libertarian',   z: 2, r: 4 },
+      { w: 'minimal',       z: 2, r: 2 },
+      { w: 'decentralised', z: 2, r: 4 },
+      { w: 'democratic',    z: 3, r: 2 },
+      { w: 'representative',z: 3, r: 3 },
+      { w: 'federal',       z: 3, r: 3 },
+      { w: 'regulated',     z: 3, r: 2 },
+      { w: 'centralised',   z: 4, r: 3 },
+      { w: 'authoritarian', z: 4, r: 4 },
+      { w: 'autocratic',    z: 4, r: 4 },
+      { w: 'despotic',      z: 5, r: 4 },
+      { w: 'tyrannical',    z: 5, r: 4 },
+      { w: 'dictatorial',   z: 5, r: 3 },
+      { w: 'oppressive',    z: 5, r: 3 },
+      { w: 'omnipotent',    z: 5, r: 4 },
+    ]
+  },
+
+  // ── POLITICAL SPECTRUM (adj) ──────────────────────────────
+  {
+    id: 'political-spectrum',
+    category: 'Politics',
+    type: 'adj',
+    left: 'radical',
+    right: 'conservative',
+    words: [
+      { w: 'revolutionary', z: 1, r: 3 },
+      { w: 'extreme',       z: 1, r: 2 },
+      { w: 'progressive',   z: 2, r: 3 },
+      { w: 'reformist',     z: 2, r: 4 },
+      { w: 'liberal',       z: 2, r: 2 },
+      { w: 'moderate',      z: 3, r: 1 },
+      { w: 'centrist',      z: 3, r: 3 },
+      { w: 'pragmatic',     z: 3, r: 3 },
+      { w: 'conventional',  z: 4, r: 3 },
+      { w: 'traditional',   z: 4, r: 2 },
+      { w: 'orthodox',      z: 4, r: 3 },
+      { w: 'reactionary',   z: 5, r: 4 },
+      { w: 'staunch',       z: 5, r: 3 },
+      { w: 'entrenched',    z: 5, r: 4 },
+      { w: 'hidebound',     z: 5, r: 5 },
+    ]
+  },
+
+  // ── POWER (verb) ──────────────────────────────────────────
+  {
+    id: 'ruling-verb',
+    category: 'Power',
+    type: 'verb',
+    left: 'advising',
+    right: 'subjugating',
+    words: [
+      { w: 'guiding',       z: 1, r: 2 },
+      { w: 'counselling',   z: 1, r: 3 },
+      { w: 'influencing',   z: 2, r: 2 },
+      { w: 'leading',       z: 2, r: 1 },
+      { w: 'directing',     z: 2, r: 2 },
+      { w: 'governing',     z: 3, r: 2 },
+      { w: 'ruling',        z: 3, r: 2 },
+      { w: 'commanding',    z: 3, r: 2 },
+      { w: 'controlling',   z: 4, r: 2 },
+      { w: 'dominating',    z: 4, r: 3 },
+      { w: 'overpowering',  z: 4, r: 3 },
+      { w: 'oppressing',    z: 5, r: 3 },
+      { w: 'tyrannising',   z: 5, r: 4 },
+      { w: 'enslaving',     z: 5, r: 3 },
+      { w: 'vanquishing',   z: 5, r: 5 },
+      { w: 'conquering',    z: 5, r: 3 },
+    ]
+  },
+
+
+  // ══════════════════════════════════════════════════════════
+  //  NARRATIVES
+  // ══════════════════════════════════════════════════════════
+
+  // ── NARRATIVE TENSION (adj) ───────────────────────────────
+  {
+    id: 'tension',
+    category: 'Tension',
+    type: 'adj',
+    left: 'tranquil',
+    right: 'explosive',
+    words: [
+      { w: 'peaceful',      z: 1, r: 1 },
+      { w: 'serene',        z: 1, r: 2 },
+      { w: 'idyllic',       z: 1, r: 4 },
+      { w: 'calm',          z: 2, r: 1 },
+      { w: 'settled',       z: 2, r: 1 },
+      { w: 'uneasy',        z: 2, r: 2 },
+      { w: 'restless',      z: 2, r: 2 },
+      { w: 'tense',         z: 3, r: 1 },
+      { w: 'fraught',       z: 3, r: 3 },
+      { w: 'charged',       z: 3, r: 3 },
+      { w: 'ominous',       z: 3, r: 3 },
+      { w: 'volatile',      z: 4, r: 3 },
+      { w: 'turbulent',     z: 4, r: 3 },
+      { w: 'precarious',    z: 4, r: 4 },
+      { w: 'combustible',   z: 4, r: 5 },
+      { w: 'frenzied',      z: 5, r: 3 },
+      { w: 'chaotic',       z: 5, r: 2 },
+      { w: 'cataclysmic',   z: 5, r: 5 },
+      { w: 'catastrophic',  z: 5, r: 3 },
+      { w: 'apocalyptic',   z: 5, r: 4 },
+    ]
+  },
+
+  // ── DESCRIBING (verb) ─────────────────────────────────────
+  {
+    id: 'describing-verb',
+    category: 'Narrating',
+    type: 'verb',
+    left: 'noting',
+    right: 'dramatising',
+    words: [
+      { w: 'mentioning',    z: 1, r: 1 },
+      { w: 'stating',       z: 1, r: 1 },
+      { w: 'recording',     z: 1, r: 2 },
+      { w: 'describing',    z: 2, r: 1 },
+      { w: 'depicting',     z: 2, r: 3 },
+      { w: 'illustrating',  z: 2, r: 2 },
+      { w: 'portraying',    z: 3, r: 3 },
+      { w: 'conveying',     z: 3, r: 3 },
+      { w: 'evoking',       z: 3, r: 4 },
+      { w: 'capturing',     z: 3, r: 3 },
+      { w: 'painting',      z: 4, r: 2 },
+      { w: 'amplifying',    z: 4, r: 4 },
+      { w: 'embellishing',  z: 4, r: 4 },
+      { w: 'exaggerating',  z: 5, r: 2 },
+      { w: 'sensationalising', z: 5, r: 4 },
+      { w: 'mythologising', z: 5, r: 5 },
+      { w: 'romanticising', z: 5, r: 4 },
+    ]
+  },
+
+  // ── CHARACTER MORALITY (adj) ──────────────────────────────
+  {
+    id: 'morality',
+    category: 'Morality',
+    type: 'adj',
+    left: 'villainous',
+    right: 'virtuous',
+    words: [
+      { w: 'wicked',        z: 1, r: 2 },
+      { w: 'evil',          z: 1, r: 1 },
+      { w: 'malevolent',    z: 1, r: 4 },
+      { w: 'nefarious',     z: 1, r: 5 },
+      { w: 'sinister',      z: 1, r: 3 },
+      { w: 'corrupt',       z: 2, r: 2 },
+      { w: 'dishonest',     z: 2, r: 2 },
+      { w: 'selfish',       z: 2, r: 1 },
+      { w: 'deceitful',     z: 2, r: 3 },
+      { w: 'flawed',        z: 3, r: 2 },
+      { w: 'conflicted',    z: 3, r: 3 },
+      { w: 'ambiguous',     z: 3, r: 3 },
+      { w: 'redeemable',    z: 3, r: 4 },
+      { w: 'honourable',    z: 4, r: 3 },
+      { w: 'decent',        z: 4, r: 1 },
+      { w: 'principled',    z: 4, r: 3 },
+      { w: 'righteous',     z: 5, r: 3 },
+      { w: 'noble',         z: 5, r: 2 },
+      { w: 'exemplary',     z: 5, r: 4 },
+      { w: 'saintly',       z: 5, r: 3 },
+      { w: 'incorruptible', z: 5, r: 5 },
+    ]
+  },
+
+  // ── EMOTIONAL JOURNEY (verb) ──────────────────────────────
+  {
+    id: 'emotional-journey',
+    category: 'Character',
+    type: 'verb',
+    left: 'suffering',
+    right: 'triumphing',
+    words: [
+      { w: 'struggling',    z: 1, r: 1 },
+      { w: 'enduring',      z: 1, r: 2 },
+      { w: 'persevering',   z: 1, r: 3 },
+      { w: 'surviving',     z: 2, r: 2 },
+      { w: 'coping',        z: 2, r: 1 },
+      { w: 'adapting',      z: 2, r: 2 },
+      { w: 'recovering',    z: 3, r: 2 },
+      { w: 'healing',       z: 3, r: 2 },
+      { w: 'growing',       z: 3, r: 1 },
+      { w: 'transforming',  z: 3, r: 3 },
+      { w: 'overcoming',    z: 4, r: 2 },
+      { w: 'prevailing',    z: 4, r: 3 },
+      { w: 'flourishing',   z: 4, r: 3 },
+      { w: 'conquering',    z: 5, r: 3 },
+      { w: 'transcending',  z: 5, r: 4 },
+      { w: 'vanquishing',   z: 5, r: 5 },
+    ]
+  },
+
+
+  // ══════════════════════════════════════════════════════════
+  //  MIGRATION
+  // ══════════════════════════════════════════════════════════
+
+  // ── BELONGING (adj) ───────────────────────────────────────
+  {
+    id: 'belonging',
+    category: 'Belonging',
+    type: 'adj',
+    left: 'displaced',
+    right: 'rooted',
+    words: [
+      { w: 'uprooted',      z: 1, r: 3 },
+      { w: 'homeless',      z: 1, r: 2 },
+      { w: 'stateless',     z: 1, r: 3 },
+      { w: 'exiled',        z: 1, r: 3 },
+      { w: 'estranged',     z: 2, r: 3 },
+      { w: 'isolated',      z: 2, r: 2 },
+      { w: 'alienated',     z: 2, r: 3 },
+      { w: 'foreign',       z: 2, r: 1 },
+      { w: 'transitional',  z: 3, r: 3 },
+      { w: 'unsettled',     z: 3, r: 2 },
+      { w: 'adapting',      z: 3, r: 2 },
+      { w: 'integrated',    z: 4, r: 3 },
+      { w: 'settled',       z: 4, r: 1 },
+      { w: 'assimilated',   z: 4, r: 4 },
+      { w: 'established',   z: 4, r: 2 },
+      { w: 'grounded',      z: 5, r: 2 },
+      { w: 'entrenched',    z: 5, r: 4 },
+      { w: 'indigenous',    z: 5, r: 4 },
+      { w: 'embedded',      z: 5, r: 3 },
+    ]
+  },
+
+  // ── MIGRATION (verb) ──────────────────────────────────────
+  {
+    id: 'migration-verb',
+    category: 'Migration',
+    type: 'verb',
+    left: 'fleeing',
+    right: 'settling',
+    words: [
+      { w: 'escaping',      z: 1, r: 2 },
+      { w: 'evacuating',    z: 1, r: 3 },
+      { w: 'abandoning',    z: 1, r: 2 },
+      { w: 'departing',     z: 2, r: 2 },
+      { w: 'leaving',       z: 2, r: 1 },
+      { w: 'migrating',     z: 2, r: 2 },
+      { w: 'travelling',    z: 3, r: 1 },
+      { w: 'journeying',    z: 3, r: 2 },
+      { w: 'relocating',    z: 3, r: 3 },
+      { w: 'transitioning', z: 3, r: 3 },
+      { w: 'arriving',      z: 4, r: 1 },
+      { w: 'establishing',  z: 4, r: 3 },
+      { w: 'integrating',   z: 4, r: 3 },
+      { w: 'assimilating',  z: 4, r: 4 },
+      { w: 'belonging',     z: 5, r: 2 },
+      { w: 'thriving',      z: 5, r: 2 },
+      { w: 'flourishing',   z: 5, r: 3 },
+    ]
+  },
+
+  // ── WELCOME (adj) ─────────────────────────────────────────
+  {
+    id: 'welcome',
+    category: 'Welcome',
+    type: 'adj',
+    left: 'hostile',
+    right: 'welcoming',
+    words: [
+      { w: 'aggressive',    z: 1, r: 2 },
+      { w: 'threatening',   z: 1, r: 2 },
+      { w: 'xenophobic',    z: 1, r: 5 },
+      { w: 'intolerant',    z: 1, r: 3 },
+      { w: 'suspicious',    z: 2, r: 2 },
+      { w: 'wary',          z: 2, r: 2 },
+      { w: 'unwelcoming',   z: 2, r: 2 },
+      { w: 'indifferent',   z: 3, r: 2 },
+      { w: 'neutral',       z: 3, r: 1 },
+      { w: 'cautious',      z: 3, r: 2 },
+      { w: 'tolerant',      z: 4, r: 2 },
+      { w: 'accepting',     z: 4, r: 2 },
+      { w: 'inclusive',     z: 4, r: 3 },
+      { w: 'hospitable',    z: 5, r: 3 },
+      { w: 'embracing',     z: 5, r: 3 },
+      { w: 'multicultural', z: 5, r: 4 },
+      { w: 'cosmopolitan',  z: 5, r: 4 },
+    ]
+  },
+
+
+  // ══════════════════════════════════════════════════════════
+  //  OUTER SPACE
+  // ══════════════════════════════════════════════════════════
+
+  // ── DISTANCE IN SPACE (adj) ───────────────────────────────
+  {
+    id: 'space-distance',
+    category: 'Space',
+    type: 'adj',
+    left: 'nearby',
+    right: 'unfathomable',
+    words: [
+      { w: 'close',         z: 1, r: 1 },
+      { w: 'adjacent',      z: 1, r: 3 },
+      { w: 'local',         z: 1, r: 1 },
+      { w: 'orbital',       z: 2, r: 3 },
+      { w: 'distant',       z: 2, r: 1 },
+      { w: 'remote',        z: 2, r: 2 },
+      { w: 'interplanetary',z: 3, r: 4 },
+      { w: 'vast',          z: 3, r: 2 },
+      { w: 'interstellar',  z: 4, r: 4 },
+      { w: 'cosmic',        z: 4, r: 3 },
+      { w: 'galactic',      z: 4, r: 3 },
+      { w: 'intergalactic', z: 5, r: 4 },
+      { w: 'infinite',      z: 5, r: 2 },
+      { w: 'immeasurable',  z: 5, r: 4 },
+      { w: 'boundless',     z: 5, r: 3 },
+      { w: 'incomprehensible', z: 5, r: 4 },
+    ]
+  },
+
+  // ── STELLAR LIFE (adj) ────────────────────────────────────
+  {
+    id: 'stellar-brightness',
+    category: 'Stars',
+    type: 'adj',
+    left: 'extinguished',
+    right: 'supernova',
+    words: [
+      { w: 'cold',          z: 1, r: 1 },
+      { w: 'dead',          z: 1, r: 1 },
+      { w: 'remnant',       z: 1, r: 3 },
+      { w: 'cooling',       z: 2, r: 2 },
+      { w: 'dim',           z: 2, r: 1 },
+      { w: 'fading',        z: 2, r: 2 },
+      { w: 'stable',        z: 3, r: 2 },
+      { w: 'burning',       z: 3, r: 1 },
+      { w: 'active',        z: 3, r: 1 },
+      { w: 'luminous',      z: 4, r: 3 },
+      { w: 'radiant',       z: 4, r: 3 },
+      { w: 'brilliant',     z: 4, r: 3 },
+      { w: 'blazing',       z: 4, r: 3 },
+      { w: 'incandescent',  z: 5, r: 5 },
+      { w: 'cataclysmic',   z: 5, r: 5 },
+      { w: 'catastrophic',  z: 5, r: 3 },
+      { w: 'apocalyptic',   z: 5, r: 4 },
+    ]
+  },
+
+  // ── SPACE EXPLORATION (verb) ──────────────────────────────
+  {
+    id: 'exploring-verb',
+    category: 'Exploration',
+    type: 'verb',
+    left: 'observing',
+    right: 'colonising',
+    words: [
+      { w: 'watching',      z: 1, r: 1 },
+      { w: 'studying',      z: 1, r: 1 },
+      { w: 'monitoring',    z: 1, r: 2 },
+      { w: 'mapping',       z: 2, r: 2 },
+      { w: 'probing',       z: 2, r: 3 },
+      { w: 'investigating', z: 2, r: 2 },
+      { w: 'exploring',     z: 3, r: 2 },
+      { w: 'surveying',     z: 3, r: 3 },
+      { w: 'venturing',     z: 3, r: 3 },
+      { w: 'pioneering',    z: 4, r: 3 },
+      { w: 'inhabiting',    z: 4, r: 3 },
+      { w: 'establishing',  z: 4, r: 3 },
+      { w: 'terraforming',  z: 5, r: 5 },
+      { w: 'conquering',    z: 5, r: 3 },
+      { w: 'dominating',    z: 5, r: 3 },
+    ]
+  },
+
+  // ── GRAVITY (adj) ─────────────────────────────────────────
+  {
+    id: 'gravity',
+    category: 'Gravity',
+    type: 'adj',
+    left: 'weightless',
+    right: 'crushing',
+    words: [
+      { w: 'floating',      z: 1, r: 2 },
+      { w: 'buoyant',       z: 1, r: 3 },
+      { w: 'featherlight',  z: 1, r: 3 },
+      { w: 'light',         z: 2, r: 1 },
+      { w: 'gentle',        z: 2, r: 1 },
+      { w: 'slight',        z: 2, r: 2 },
+      { w: 'moderate',      z: 3, r: 1 },
+      { w: 'earthlike',     z: 3, r: 3 },
+      { w: 'substantial',   z: 4, r: 3 },
+      { w: 'intense',       z: 4, r: 2 },
+      { w: 'powerful',      z: 4, r: 1 },
+      { w: 'immense',       z: 5, r: 3 },
+      { w: 'overwhelming',  z: 5, r: 3 },
+      { w: 'pulverising',   z: 5, r: 4 },
+      { w: 'annihilating',  z: 5, r: 4 },
+    ]
+  },
+
+
+  // ══════════════════════════════════════════════════════════
+  //  THE HUMAN BODY
+  // ══════════════════════════════════════════════════════════
+
+  // ── PAIN (adj) ────────────────────────────────────────────
+  {
+    id: 'pain',
+    category: 'Pain',
+    type: 'adj',
+    left: 'painless',
+    right: 'agonising',
+    words: [
+      { w: 'comfortable',   z: 1, r: 2 },
+      { w: 'numb',          z: 1, r: 2 },
+      { w: 'tender',        z: 2, r: 2 },
+      { w: 'sore',          z: 2, r: 1 },
+      { w: 'sensitive',     z: 2, r: 2 },
+      { w: 'aching',        z: 3, r: 2 },
+      { w: 'throbbing',     z: 3, r: 2 },
+      { w: 'stinging',      z: 3, r: 2 },
+      { w: 'burning',       z: 4, r: 2 },
+      { w: 'searing',       z: 4, r: 4 },
+      { w: 'excruciating',  z: 4, r: 4 },
+      { w: 'unbearable',    z: 5, r: 3 },
+      { w: 'torturous',     z: 5, r: 4 },
+      { w: 'harrowing',     z: 5, r: 4 },
+      { w: 'insufferable',  z: 5, r: 4 },
+    ]
+  },
+
+  // ── HEALTH (adj) ──────────────────────────────────────────
+  {
+    id: 'health',
+    category: 'Health',
+    type: 'adj',
+    left: 'critical',
+    right: 'thriving',
+    words: [
+      { w: 'dying',         z: 1, r: 2 },
+      { w: 'failing',       z: 1, r: 2 },
+      { w: 'deteriorating', z: 1, r: 3 },
+      { w: 'gravely-ill',   z: 1, r: 3 },
+      { w: 'sick',          z: 2, r: 1 },
+      { w: 'unwell',        z: 2, r: 1 },
+      { w: 'frail',         z: 2, r: 2 },
+      { w: 'debilitated',   z: 2, r: 4 },
+      { w: 'recovering',    z: 3, r: 2 },
+      { w: 'stable',        z: 3, r: 2 },
+      { w: 'improving',     z: 3, r: 2 },
+      { w: 'healthy',       z: 4, r: 1 },
+      { w: 'fit',           z: 4, r: 1 },
+      { w: 'robust',        z: 4, r: 3 },
+      { w: 'vigorous',      z: 4, r: 3 },
+      { w: 'flourishing',   z: 5, r: 3 },
+      { w: 'vibrant',       z: 5, r: 3 },
+      { w: 'invigorated',   z: 5, r: 4 },
+      { w: 'exuberant',     z: 5, r: 4 },
+    ]
+  },
+
+  // ── BODY MOVEMENT (verb) ──────────────────────────────────
+  {
+    id: 'body-movement',
+    category: 'Body',
+    type: 'verb',
+    left: 'collapsing',
+    right: 'leaping',
+    words: [
+      { w: 'slumping',      z: 1, r: 3 },
+      { w: 'crumpling',     z: 1, r: 3 },
+      { w: 'sinking',       z: 1, r: 2 },
+      { w: 'dragging',      z: 2, r: 2 },
+      { w: 'limping',       z: 2, r: 2 },
+      { w: 'shuffling',     z: 2, r: 2 },
+      { w: 'standing',      z: 3, r: 1 },
+      { w: 'balancing',     z: 3, r: 2 },
+      { w: 'stepping',      z: 3, r: 1 },
+      { w: 'striding',      z: 4, r: 2 },
+      { w: 'bounding',      z: 4, r: 3 },
+      { w: 'vaulting',      z: 4, r: 4 },
+      { w: 'springing',     z: 5, r: 3 },
+      { w: 'soaring',       z: 5, r: 3 },
+      { w: 'catapulting',   z: 5, r: 4 },
+    ]
+  },
+
+  // ── HUNGER (adj) ──────────────────────────────────────────
+  {
+    id: 'hunger',
+    category: 'Hunger',
+    type: 'adj',
+    left: 'starving',
+    right: 'stuffed',
+    words: [
+      { w: 'famished',      z: 1, r: 3 },
+      { w: 'ravenous',      z: 1, r: 3 },
+      { w: 'malnourished',  z: 1, r: 4 },
+      { w: 'hungry',        z: 2, r: 1 },
+      { w: 'peckish',       z: 2, r: 3 },
+      { w: 'empty',         z: 2, r: 1 },
+      { w: 'satisfied',     z: 3, r: 2 },
+      { w: 'nourished',     z: 3, r: 3 },
+      { w: 'full',          z: 4, r: 1 },
+      { w: 'sated',         z: 4, r: 3 },
+      { w: 'replete',       z: 4, r: 4 },
+      { w: 'gorged',        z: 5, r: 3 },
+      { w: 'bloated',       z: 5, r: 3 },
+      { w: 'glutted',       z: 5, r: 4 },
+      { w: 'satiated',      z: 5, r: 4 },
+    ]
+  },
+
+  // ── EXHAUSTION (adj) ──────────────────────────────────────
+  {
+    id: 'exhaustion',
+    category: 'Energy',
+    type: 'adj',
+    left: 'exhausted',
+    right: 'energised',
+    words: [
+      { w: 'spent',         z: 1, r: 2 },
+      { w: 'drained',       z: 1, r: 2 },
+      { w: 'depleted',      z: 1, r: 3 },
+      { w: 'prostrate',     z: 1, r: 4 },
+      { w: 'enervated',     z: 1, r: 5 },
+      { w: 'weary',         z: 2, r: 2 },
+      { w: 'fatigued',      z: 2, r: 3 },
+      { w: 'lethargic',     z: 2, r: 3 },
+      { w: 'listless',      z: 2, r: 4 },
+      { w: 'tired',         z: 2, r: 1 },
+      { w: 'sluggish',      z: 3, r: 2 },
+      { w: 'moderate',      z: 3, r: 1 },
+      { w: 'refreshed',     z: 4, r: 2 },
+      { w: 'revived',       z: 4, r: 3 },
+      { w: 'restored',      z: 4, r: 3 },
+      { w: 'invigorated',   z: 5, r: 4 },
+      { w: 'exuberant',     z: 5, r: 4 },
+      { w: 'vivacious',     z: 5, r: 4 },
+      { w: 'electrified',   z: 5, r: 4 },
+    ]
+  },
+
+
+  // ══════════════════════════════════════════════════════════
+  //  NEW ADJECTIVE SCALES
+  // ══════════════════════════════════════════════════════════
+
+  // ── WEALTH (adj) ──────────────────────────────────────────
+  {
+    id: 'wealth',
+    category: 'Wealth',
+    type: 'adj',
+    left: 'destitute',
+    right: 'opulent',
+    words: [
+      { w: 'penniless',     z: 1, r: 3 },
+      { w: 'bankrupt',      z: 1, r: 3 },
+      { w: 'impoverished',  z: 1, r: 3 },
+      { w: 'indigent',      z: 1, r: 5 },
+      { w: 'poor',          z: 2, r: 1 },
+      { w: 'struggling',    z: 2, r: 1 },
+      { w: 'modest',        z: 2, r: 2 },
+      { w: 'frugal',        z: 2, r: 3 },
+      { w: 'comfortable',   z: 3, r: 2 },
+      { w: 'stable',        z: 3, r: 1 },
+      { w: 'adequate',      z: 3, r: 2 },
+      { w: 'well-off',      z: 4, r: 2 },
+      { w: 'prosperous',    z: 4, r: 3 },
+      { w: 'affluent',      z: 4, r: 3 },
+      { w: 'wealthy',       z: 4, r: 2 },
+      { w: 'lavish',        z: 5, r: 3 },
+      { w: 'extravagant',   z: 5, r: 3 },
+      { w: 'luxurious',     z: 5, r: 3 },
+      { w: 'sumptuous',     z: 5, r: 4 },
+      { w: 'plutocratic',   z: 5, r: 5 },
+    ]
+  },
+
+  // ── INTELLIGENCE (adj) ────────────────────────────────────
+  {
+    id: 'intelligence',
+    category: 'Intelligence',
+    type: 'adj',
+    left: 'ignorant',
+    right: 'brilliant',
+    words: [
+      { w: 'oblivious',     z: 1, r: 3 },
+      { w: 'naive',         z: 1, r: 2 },
+      { w: 'uninformed',    z: 1, r: 2 },
+      { w: 'dense',         z: 1, r: 2 },
+      { w: 'slow',          z: 2, r: 1 },
+      { w: 'simple',        z: 2, r: 1 },
+      { w: 'ordinary',      z: 3, r: 1 },
+      { w: 'capable',       z: 3, r: 2 },
+      { w: 'competent',     z: 3, r: 2 },
+      { w: 'clever',        z: 4, r: 1 },
+      { w: 'sharp',         z: 4, r: 2 },
+      { w: 'astute',        z: 4, r: 3 },
+      { w: 'gifted',        z: 4, r: 2 },
+      { w: 'perceptive',    z: 4, r: 3 },
+      { w: 'intellectual',  z: 5, r: 3 },
+      { w: 'exceptional',   z: 5, r: 3 },
+      { w: 'prodigious',    z: 5, r: 5 },
+      { w: 'luminous',      z: 5, r: 4 },
+      { w: 'transcendent',  z: 5, r: 5 },
+    ]
+  },
+
+  // ── KINDNESS (adj) ────────────────────────────────────────
+  {
+    id: 'kindness',
+    category: 'Kindness',
+    type: 'adj',
+    left: 'cruel',
+    right: 'benevolent',
+    words: [
+      { w: 'ruthless',      z: 1, r: 3 },
+      { w: 'heartless',     z: 1, r: 2 },
+      { w: 'callous',       z: 1, r: 3 },
+      { w: 'merciless',     z: 1, r: 3 },
+      { w: 'harsh',         z: 2, r: 1 },
+      { w: 'cold',          z: 2, r: 1 },
+      { w: 'indifferent',   z: 2, r: 2 },
+      { w: 'uncaring',      z: 2, r: 2 },
+      { w: 'neutral',       z: 3, r: 1 },
+      { w: 'polite',        z: 3, r: 1 },
+      { w: 'civil',         z: 3, r: 2 },
+      { w: 'considerate',   z: 4, r: 2 },
+      { w: 'compassionate', z: 4, r: 3 },
+      { w: 'generous',      z: 4, r: 2 },
+      { w: 'empathetic',    z: 4, r: 3 },
+      { w: 'magnanimous',   z: 5, r: 4 },
+      { w: 'altruistic',    z: 5, r: 4 },
+      { w: 'philanthropic', z: 5, r: 4 },
+      { w: 'munificent',    z: 5, r: 5 },
+    ]
+  },
+
+  // ── DIFFICULTY (adj) ──────────────────────────────────────
+  {
+    id: 'difficulty',
+    category: 'Difficulty',
+    type: 'adj',
+    left: 'effortless',
+    right: 'insurmountable',
+    words: [
+      { w: 'simple',        z: 1, r: 1 },
+      { w: 'easy',          z: 1, r: 1 },
+      { w: 'trivial',       z: 1, r: 2 },
+      { w: 'elementary',    z: 1, r: 2 },
+      { w: 'straightforward', z: 2, r: 2 },
+      { w: 'manageable',    z: 2, r: 2 },
+      { w: 'moderate',      z: 3, r: 1 },
+      { w: 'demanding',     z: 3, r: 2 },
+      { w: 'challenging',   z: 3, r: 2 },
+      { w: 'taxing',        z: 4, r: 3 },
+      { w: 'arduous',       z: 4, r: 4 },
+      { w: 'formidable',    z: 4, r: 3 },
+      { w: 'gruelling',     z: 4, r: 3 },
+      { w: 'punishing',     z: 4, r: 3 },
+      { w: 'impossible',    z: 5, r: 2 },
+      { w: 'overwhelming',  z: 5, r: 3 },
+      { w: 'prohibitive',   z: 5, r: 4 },
+      { w: 'herculean',     z: 5, r: 4 },
+      { w: 'sisyphean',     z: 5, r: 5 },
+    ]
+  },
+
+  // ── ANGER (adj) ───────────────────────────────────────────
+  {
+    id: 'anger',
+    category: 'Anger',
+    type: 'adj',
+    left: 'serene',
+    right: 'incensed',
+    words: [
+      { w: 'calm',          z: 1, r: 1 },
+      { w: 'untroubled',    z: 1, r: 3 },
+      { w: 'placid',        z: 1, r: 3 },
+      { w: 'mild',          z: 2, r: 1 },
+      { w: 'bothered',      z: 2, r: 2 },
+      { w: 'irritated',     z: 2, r: 2 },
+      { w: 'annoyed',       z: 2, r: 1 },
+      { w: 'disgruntled',   z: 3, r: 3 },
+      { w: 'agitated',      z: 3, r: 3 },
+      { w: 'angry',         z: 3, r: 1 },
+      { w: 'irate',         z: 4, r: 3 },
+      { w: 'furious',       z: 4, r: 2 },
+      { w: 'seething',      z: 4, r: 3 },
+      { w: 'enraged',       z: 5, r: 3 },
+      { w: 'livid',         z: 5, r: 3 },
+      { w: 'apoplectic',    z: 5, r: 5 },
+      { w: 'wrathful',      z: 5, r: 4 },
+      { w: 'incandescent',  z: 5, r: 5 },
+    ]
+  },
+
+  // ── TRUST (adj) ───────────────────────────────────────────
+  {
+    id: 'trust',
+    category: 'Trust',
+    type: 'adj',
+    left: 'treacherous',
+    right: 'steadfast',
+    words: [
+      { w: 'deceitful',     z: 1, r: 3 },
+      { w: 'dishonest',     z: 1, r: 2 },
+      { w: 'duplicitous',   z: 1, r: 5 },
+      { w: 'manipulative',  z: 1, r: 3 },
+      { w: 'unreliable',    z: 2, r: 2 },
+      { w: 'inconsistent',  z: 2, r: 2 },
+      { w: 'unpredictable', z: 2, r: 2 },
+      { w: 'uncertain',     z: 3, r: 1 },
+      { w: 'cautious',      z: 3, r: 2 },
+      { w: 'dependable',    z: 4, r: 2 },
+      { w: 'reliable',      z: 4, r: 2 },
+      { w: 'honest',        z: 4, r: 1 },
+      { w: 'trustworthy',   z: 4, r: 2 },
+      { w: 'loyal',         z: 5, r: 2 },
+      { w: 'unwavering',    z: 5, r: 3 },
+      { w: 'resolute',      z: 5, r: 3 },
+      { w: 'incorruptible', z: 5, r: 5 },
+      { w: 'inviolable',    z: 5, r: 5 },
+    ]
+  },
+
+  // ── IMPORTANCE (adj) ──────────────────────────────────────
+  {
+    id: 'importance',
+    category: 'Importance',
+    type: 'adj',
+    left: 'trivial',
+    right: 'monumental',
+    words: [
+      { w: 'petty',         z: 1, r: 2 },
+      { w: 'negligible',    z: 1, r: 3 },
+      { w: 'inconsequential', z: 1, r: 4 },
+      { w: 'trifling',      z: 1, r: 3 },
+      { w: 'minor',         z: 2, r: 1 },
+      { w: 'marginal',      z: 2, r: 3 },
+      { w: 'modest',        z: 2, r: 2 },
+      { w: 'moderate',      z: 3, r: 1 },
+      { w: 'notable',       z: 3, r: 2 },
+      { w: 'significant',   z: 3, r: 2 },
+      { w: 'considerable',  z: 4, r: 3 },
+      { w: 'substantial',   z: 4, r: 3 },
+      { w: 'momentous',     z: 4, r: 4 },
+      { w: 'pivotal',       z: 5, r: 4 },
+      { w: 'landmark',      z: 5, r: 3 },
+      { w: 'epoch-making',  z: 5, r: 5 },
+      { w: 'seismic',       z: 5, r: 4 },
+      { w: 'historic',      z: 5, r: 2 },
+    ]
+  },
+
+  // ── COMPLEXITY (adj) ──────────────────────────────────────
+  {
+    id: 'complexity',
+    category: 'Complexity',
+    type: 'adj',
+    left: 'simplistic',
+    right: 'labyrinthine',
+    words: [
+      { w: 'basic',         z: 1, r: 1 },
+      { w: 'rudimentary',   z: 1, r: 3 },
+      { w: 'elementary',    z: 1, r: 2 },
+      { w: 'plain',         z: 2, r: 1 },
+      { w: 'straightforward', z: 2, r: 2 },
+      { w: 'uncomplicated', z: 2, r: 2 },
+      { w: 'moderate',      z: 3, r: 1 },
+      { w: 'nuanced',       z: 3, r: 3 },
+      { w: 'layered',       z: 3, r: 3 },
+      { w: 'complex',       z: 4, r: 2 },
+      { w: 'intricate',     z: 4, r: 3 },
+      { w: 'convoluted',    z: 4, r: 4 },
+      { w: 'elaborate',     z: 4, r: 3 },
+      { w: 'byzantine',     z: 5, r: 5 },
+      { w: 'incomprehensible', z: 5, r: 4 },
+      { w: 'impenetrable',  z: 5, r: 4 },
+      { w: 'arcane',        z: 5, r: 4 },
+      { w: 'abstruse',      z: 5, r: 5 },
+    ]
+  },
+
+  // ── BEAUTY (adj) ──────────────────────────────────────────
+  {
+    id: 'beauty',
+    category: 'Beauty',
+    type: 'adj',
+    left: 'grotesque',
+    right: 'resplendent',
+    words: [
+      { w: 'hideous',       z: 1, r: 3 },
+      { w: 'repulsive',     z: 1, r: 3 },
+      { w: 'unsightly',     z: 1, r: 3 },
+      { w: 'homely',        z: 2, r: 2 },
+      { w: 'plain',         z: 2, r: 1 },
+      { w: 'unremarkable',  z: 2, r: 2 },
+      { w: 'ordinary',      z: 3, r: 1 },
+      { w: 'pleasant',      z: 3, r: 1 },
+      { w: 'attractive',    z: 3, r: 2 },
+      { w: 'handsome',      z: 4, r: 2 },
+      { w: 'striking',      z: 4, r: 2 },
+      { w: 'stunning',      z: 4, r: 2 },
+      { w: 'magnificent',   z: 4, r: 3 },
+      { w: 'exquisite',     z: 5, r: 3 },
+      { w: 'breathtaking',  z: 5, r: 3 },
+      { w: 'sublime',       z: 5, r: 4 },
+      { w: 'transcendent',  z: 5, r: 5 },
+      { w: 'ineffable',     z: 5, r: 5 },
+    ]
+  },
+
+  // ── SOUND QUALITY (adj) ───────────────────────────────────
+  {
+    id: 'sound-quality',
+    category: 'Sound Quality',
+    type: 'adj',
+    left: 'discordant',
+    right: 'melodious',
+    words: [
+      { w: 'cacophonous',   z: 1, r: 5 },
+      { w: 'jarring',       z: 1, r: 3 },
+      { w: 'grating',       z: 1, r: 3 },
+      { w: 'harsh',         z: 2, r: 1 },
+      { w: 'rough',         z: 2, r: 1 },
+      { w: 'monotonous',    z: 2, r: 3 },
+      { w: 'flat',          z: 3, r: 1 },
+      { w: 'neutral',       z: 3, r: 1 },
+      { w: 'pleasant',      z: 3, r: 1 },
+      { w: 'tuneful',       z: 4, r: 3 },
+      { w: 'harmonious',    z: 4, r: 3 },
+      { w: 'lilting',       z: 4, r: 4 },
+      { w: 'euphonious',    z: 5, r: 5 },
+      { w: 'resonant',      z: 5, r: 3 },
+      { w: 'mellifluous',   z: 5, r: 5 },
+      { w: 'silvery',       z: 5, r: 3 },
+      { w: 'dulcet',        z: 5, r: 4 },
+    ]
+  },
+
+  // ── AGE (adj) ─────────────────────────────────────────────
+  {
+    id: 'age',
+    category: 'Age',
+    type: 'adj',
+    left: 'newborn',
+    right: 'ancient',
+    words: [
+      { w: 'infant',        z: 1, r: 2 },
+      { w: 'fledgling',     z: 1, r: 3 },
+      { w: 'nascent',       z: 1, r: 4 },
+      { w: 'young',         z: 2, r: 1 },
+      { w: 'juvenile',      z: 2, r: 3 },
+      { w: 'adolescent',    z: 2, r: 3 },
+      { w: 'youthful',      z: 2, r: 2 },
+      { w: 'mature',        z: 3, r: 2 },
+      { w: 'middle-aged',   z: 3, r: 1 },
+      { w: 'established',   z: 3, r: 2 },
+      { w: 'venerable',     z: 4, r: 4 },
+      { w: 'elderly',       z: 4, r: 2 },
+      { w: 'aged',          z: 4, r: 2 },
+      { w: 'antique',       z: 5, r: 3 },
+      { w: 'archaic',       z: 5, r: 4 },
+      { w: 'primordial',    z: 5, r: 5 },
+      { w: 'immemorial',    z: 5, r: 5 },
+    ]
+  },
+
+  // ── CERTAINTY (adj) ───────────────────────────────────────
+  {
+    id: 'certainty',
+    category: 'Certainty',
+    type: 'adj',
+    left: 'impossible',
+    right: 'inevitable',
+    words: [
+      { w: 'inconceivable', z: 1, r: 4 },
+      { w: 'implausible',   z: 1, r: 3 },
+      { w: 'unlikely',      z: 2, r: 1 },
+      { w: 'improbable',    z: 2, r: 3 },
+      { w: 'doubtful',      z: 2, r: 2 },
+      { w: 'uncertain',     z: 3, r: 1 },
+      { w: 'possible',      z: 3, r: 1 },
+      { w: 'plausible',     z: 3, r: 3 },
+      { w: 'probable',      z: 4, r: 3 },
+      { w: 'likely',        z: 4, r: 1 },
+      { w: 'expected',      z: 4, r: 2 },
+      { w: 'certain',       z: 5, r: 1 },
+      { w: 'inescapable',   z: 5, r: 4 },
+      { w: 'inexorable',    z: 5, r: 5 },
+      { w: 'immutable',     z: 5, r: 5 },
+      { w: 'ineluctable',   z: 5, r: 5 },
+    ]
+  },
+
+  // ── POPULARITY (adj) ──────────────────────────────────────
+  {
+    id: 'popularity',
+    category: 'Popularity',
+    type: 'adj',
+    left: 'obscure',
+    right: 'legendary',
+    words: [
+      { w: 'unknown',       z: 1, r: 1 },
+      { w: 'forgotten',     z: 1, r: 2 },
+      { w: 'overlooked',    z: 1, r: 2 },
+      { w: 'unrecognised',  z: 2, r: 3 },
+      { w: 'minor',         z: 2, r: 1 },
+      { w: 'niche',         z: 2, r: 3 },
+      { w: 'known',         z: 3, r: 1 },
+      { w: 'recognised',    z: 3, r: 2 },
+      { w: 'respected',     z: 3, r: 2 },
+      { w: 'popular',       z: 4, r: 1 },
+      { w: 'celebrated',    z: 4, r: 2 },
+      { w: 'renowned',      z: 4, r: 3 },
+      { w: 'illustrious',   z: 4, r: 4 },
+      { w: 'iconic',        z: 5, r: 3 },
+      { w: 'immortal',      z: 5, r: 3 },
+      { w: 'mythical',      z: 5, r: 3 },
+      { w: 'transcendent',  z: 5, r: 5 },
+    ]
+  },
+
+  // ── LOYALTY (adj) ─────────────────────────────────────────
+  {
+    id: 'loyalty',
+    category: 'Loyalty',
+    type: 'adj',
+    left: 'traitorous',
+    right: 'devoted',
+    words: [
+      { w: 'disloyal',      z: 1, r: 3 },
+      { w: 'faithless',     z: 1, r: 3 },
+      { w: 'perfidious',    z: 1, r: 5 },
+      { w: 'unreliable',    z: 2, r: 2 },
+      { w: 'wavering',      z: 2, r: 3 },
+      { w: 'inconsistent',  z: 2, r: 2 },
+      { w: 'uncommitted',   z: 3, r: 3 },
+      { w: 'neutral',       z: 3, r: 1 },
+      { w: 'supportive',    z: 4, r: 2 },
+      { w: 'faithful',      z: 4, r: 2 },
+      { w: 'dedicated',     z: 4, r: 2 },
+      { w: 'staunch',       z: 4, r: 3 },
+      { w: 'steadfast',     z: 5, r: 3 },
+      { w: 'unwavering',    z: 5, r: 3 },
+      { w: 'unshakeable',   z: 5, r: 4 },
+      { w: 'inviolable',    z: 5, r: 5 },
+    ]
+  },
+
+  // ── AMBITION (adj) ────────────────────────────────────────
+  {
+    id: 'ambition',
+    category: 'Ambition',
+    type: 'adj',
+    left: 'apathetic',
+    right: 'relentless',
+    words: [
+      { w: 'indifferent',   z: 1, r: 2 },
+      { w: 'passive',       z: 1, r: 2 },
+      { w: 'lethargic',     z: 1, r: 3 },
+      { w: 'disengaged',    z: 2, r: 3 },
+      { w: 'unmotivated',   z: 2, r: 2 },
+      { w: 'complacent',    z: 2, r: 3 },
+      { w: 'content',       z: 3, r: 1 },
+      { w: 'moderate',      z: 3, r: 1 },
+      { w: 'motivated',     z: 4, r: 2 },
+      { w: 'driven',        z: 4, r: 2 },
+      { w: 'ambitious',     z: 4, r: 2 },
+      { w: 'tenacious',     z: 4, r: 3 },
+      { w: 'zealous',       z: 5, r: 3 },
+      { w: 'indefatigable', z: 5, r: 5 },
+      { w: 'dogged',        z: 5, r: 3 },
+      { w: 'inexorable',    z: 5, r: 5 },
+      { w: 'implacable',    z: 5, r: 5 },
+    ]
+  },
+
+  // ── TRANSPARENCY (adj) ────────────────────────────────────
+  {
+    id: 'transparency',
+    category: 'Transparency',
+    type: 'adj',
+    left: 'secretive',
+    right: 'transparent',
+    words: [
+      { w: 'clandestine',   z: 1, r: 4 },
+      { w: 'covert',        z: 1, r: 3 },
+      { w: 'concealed',     z: 1, r: 3 },
+      { w: 'hidden',        z: 2, r: 1 },
+      { w: 'guarded',       z: 2, r: 2 },
+      { w: 'discreet',      z: 2, r: 3 },
+      { w: 'reserved',      z: 3, r: 2 },
+      { w: 'cautious',      z: 3, r: 2 },
+      { w: 'measured',      z: 3, r: 3 },
+      { w: 'open',          z: 4, r: 1 },
+      { w: 'candid',        z: 4, r: 3 },
+      { w: 'forthright',    z: 4, r: 3 },
+      { w: 'frank',         z: 4, r: 2 },
+      { w: 'unambiguous',   z: 5, r: 3 },
+      { w: 'unequivocal',   z: 5, r: 5 },
+      { w: 'pellucid',      z: 5, r: 5 },
+    ]
+  },
+
+  // ── ORIGINALITY (adj) ─────────────────────────────────────
+  {
+    id: 'originality',
+    category: 'Originality',
+    type: 'adj',
+    left: 'derivative',
+    right: 'groundbreaking',
+    words: [
+      { w: 'copied',        z: 1, r: 1 },
+      { w: 'imitative',     z: 1, r: 3 },
+      { w: 'plagiarised',   z: 1, r: 3 },
+      { w: 'unoriginal',    z: 2, r: 2 },
+      { w: 'conventional',  z: 2, r: 2 },
+      { w: 'predictable',   z: 2, r: 2 },
+      { w: 'familiar',      z: 3, r: 1 },
+      { w: 'fresh',         z: 3, r: 1 },
+      { w: 'novel',         z: 3, r: 2 },
+      { w: 'inventive',     z: 4, r: 3 },
+      { w: 'imaginative',   z: 4, r: 2 },
+      { w: 'innovative',    z: 4, r: 3 },
+      { w: 'pioneering',    z: 5, r: 3 },
+      { w: 'revolutionary', z: 5, r: 3 },
+      { w: 'epoch-making',  z: 5, r: 5 },
+      { w: 'trailblazing',  z: 5, r: 4 },
+      { w: 'seminal',       z: 5, r: 4 },
+    ]
+  },
+
+  // ── DANGER (adj) ──────────────────────────────────────────
+  {
+    id: 'danger',
+    category: 'Danger',
+    type: 'adj',
+    left: 'harmless',
+    right: 'lethal',
+    words: [
+      { w: 'safe',          z: 1, r: 1 },
+      { w: 'benign',        z: 1, r: 3 },
+      { w: 'innocuous',     z: 1, r: 4 },
+      { w: 'mild',          z: 2, r: 1 },
+      { w: 'low-risk',      z: 2, r: 2 },
+      { w: 'moderate',      z: 3, r: 1 },
+      { w: 'risky',         z: 3, r: 1 },
+      { w: 'hazardous',     z: 3, r: 3 },
+      { w: 'precarious',    z: 4, r: 4 },
+      { w: 'perilous',      z: 4, r: 3 },
+      { w: 'treacherous',   z: 4, r: 3 },
+      { w: 'menacing',      z: 4, r: 3 },
+      { w: 'deadly',        z: 5, r: 2 },
+      { w: 'fatal',         z: 5, r: 2 },
+      { w: 'catastrophic',  z: 5, r: 3 },
+      { w: 'annihilating',  z: 5, r: 4 },
+    ]
+  },
+
+  // ── CREATIVITY (adj) ──────────────────────────────────────
+  {
+    id: 'creativity',
+    category: 'Creativity',
+    type: 'adj',
+    left: 'uninspired',
+    right: 'visionary',
+    words: [
+      { w: 'dull',          z: 1, r: 1 },
+      { w: 'bland',         z: 1, r: 2 },
+      { w: 'pedestrian',    z: 1, r: 4 },
+      { w: 'unimaginative', z: 2, r: 2 },
+      { w: 'formulaic',     z: 2, r: 3 },
+      { w: 'adequate',      z: 3, r: 2 },
+      { w: 'capable',       z: 3, r: 2 },
+      { w: 'creative',      z: 3, r: 1 },
+      { w: 'imaginative',   z: 4, r: 2 },
+      { w: 'inspired',      z: 4, r: 2 },
+      { w: 'inventive',     z: 4, r: 3 },
+      { w: 'ingenious',     z: 4, r: 3 },
+      { w: 'brilliant',     z: 5, r: 2 },
+      { w: 'luminous',      z: 5, r: 4 },
+      { w: 'transcendent',  z: 5, r: 5 },
+      { w: 'prophetic',     z: 5, r: 4 },
+    ]
+  },
+
+  // ── PATIENCE (adj) ────────────────────────────────────────
+  {
+    id: 'patience',
+    category: 'Patience',
+    type: 'adj',
+    left: 'impulsive',
+    right: 'stoic',
+    words: [
+      { w: 'reckless',      z: 1, r: 2 },
+      { w: 'hasty',         z: 1, r: 2 },
+      { w: 'rash',          z: 1, r: 2 },
+      { w: 'restless',      z: 2, r: 2 },
+      { w: 'impatient',     z: 2, r: 2 },
+      { w: 'anxious',       z: 2, r: 2 },
+      { w: 'moderate',      z: 3, r: 1 },
+      { w: 'composed',      z: 3, r: 2 },
+      { w: 'measured',      z: 3, r: 3 },
+      { w: 'patient',       z: 4, r: 1 },
+      { w: 'calm',          z: 4, r: 1 },
+      { w: 'forbearing',    z: 4, r: 4 },
+      { w: 'imperturbable', z: 5, r: 5 },
+      { w: 'unflappable',   z: 5, r: 4 },
+      { w: 'equanimous',    z: 5, r: 5 },
+      { w: 'philosophical', z: 5, r: 4 },
+    ]
+  },
+
+  // ── ENVIRONMENTAL IMPACT (adj) ────────────────────────────
+  {
+    id: 'environment',
+    category: 'Environment',
+    type: 'adj',
+    left: 'pristine',
+    right: 'devastated',
+    words: [
+      { w: 'untouched',     z: 1, r: 2 },
+      { w: 'unspoiled',     z: 1, r: 3 },
+      { w: 'immaculate',    z: 1, r: 3 },
+      { w: 'clean',         z: 2, r: 1 },
+      { w: 'healthy',       z: 2, r: 1 },
+      { w: 'balanced',      z: 3, r: 2 },
+      { w: 'threatened',    z: 3, r: 2 },
+      { w: 'vulnerable',    z: 3, r: 3 },
+      { w: 'degraded',      z: 4, r: 3 },
+      { w: 'polluted',      z: 4, r: 2 },
+      { w: 'contaminated',  z: 4, r: 3 },
+      { w: 'depleted',      z: 4, r: 3 },
+      { w: 'ravaged',       z: 5, r: 3 },
+      { w: 'decimated',     z: 5, r: 3 },
+      { w: 'annihilated',   z: 5, r: 4 },
+      { w: 'irrecoverable', z: 5, r: 4 },
+    ]
+  },
+
+  // ── CONFIDENCE (adj) ──────────────────────────────────────
+  {
+    id: 'confidence',
+    category: 'Confidence',
+    type: 'adj',
+    left: 'self-doubting',
+    right: 'arrogant',
+    words: [
+      { w: 'insecure',      z: 1, r: 2 },
+      { w: 'timid',         z: 1, r: 2 },
+      { w: 'diffident',     z: 1, r: 4 },
+      { w: 'meek',          z: 2, r: 2 },
+      { w: 'hesitant',      z: 2, r: 2 },
+      { w: 'uncertain',     z: 2, r: 1 },
+      { w: 'assured',       z: 3, r: 3 },
+      { w: 'confident',     z: 3, r: 1 },
+      { w: 'composed',      z: 3, r: 2 },
+      { w: 'bold',          z: 4, r: 1 },
+      { w: 'assertive',     z: 4, r: 3 },
+      { w: 'self-assured',  z: 4, r: 3 },
+      { w: 'imperious',     z: 5, r: 4 },
+      { w: 'haughty',       z: 5, r: 4 },
+      { w: 'supercilious',  z: 5, r: 5 },
+      { w: 'overbearing',   z: 5, r: 4 },
+    ]
+  },
+
+  // ── SURPRISE (adj) ────────────────────────────────────────
+  {
+    id: 'surprise',
+    category: 'Surprise',
+    type: 'adj',
+    left: 'predictable',
+    right: 'stupefying',
+    words: [
+      { w: 'expected',      z: 1, r: 2 },
+      { w: 'routine',       z: 1, r: 2 },
+      { w: 'unremarkable',  z: 1, r: 2 },
+      { w: 'familiar',      z: 2, r: 1 },
+      { w: 'unsurprising',  z: 2, r: 2 },
+      { w: 'ordinary',      z: 2, r: 1 },
+      { w: 'unexpected',    z: 3, r: 2 },
+      { w: 'unusual',       z: 3, r: 2 },
+      { w: 'surprising',    z: 3, r: 1 },
+      { w: 'startling',     z: 4, r: 2 },
+      { w: 'astonishing',   z: 4, r: 3 },
+      { w: 'staggering',    z: 4, r: 3 },
+      { w: 'astounding',    z: 5, r: 3 },
+      { w: 'flabbergasting',z: 5, r: 4 },
+      { w: 'mind-boggling', z: 5, r: 3 },
+      { w: 'incomprehensible', z: 5, r: 4 },
+    ]
+  },
+
+  // ── ISOLATION (adj) ───────────────────────────────────────
+  {
+    id: 'isolation',
+    category: 'Isolation',
+    type: 'adj',
+    left: 'solitary',
+    right: 'inseparable',
+    words: [
+      { w: 'isolated',      z: 1, r: 2 },
+      { w: 'reclusive',     z: 1, r: 3 },
+      { w: 'hermetic',      z: 1, r: 4 },
+      { w: 'withdrawn',     z: 2, r: 3 },
+      { w: 'detached',      z: 2, r: 3 },
+      { w: 'reserved',      z: 2, r: 2 },
+      { w: 'independent',   z: 3, r: 2 },
+      { w: 'self-sufficient', z: 3, r: 3 },
+      { w: 'connected',     z: 4, r: 2 },
+      { w: 'sociable',      z: 4, r: 2 },
+      { w: 'interdependent',z: 4, r: 4 },
+      { w: 'bonded',        z: 5, r: 3 },
+      { w: 'symbiotic',     z: 5, r: 5 },
+      { w: 'intertwined',   z: 5, r: 4 },
+      { w: 'indivisible',   z: 5, r: 4 },
+    ]
+  },
+
+  // ── JUSTICE (adj) ─────────────────────────────────────────
+  {
+    id: 'justice',
+    category: 'Justice',
+    type: 'adj',
+    left: 'corrupt',
+    right: 'equitable',
+    words: [
+      { w: 'unjust',        z: 1, r: 2 },
+      { w: 'biased',        z: 1, r: 2 },
+      { w: 'prejudiced',    z: 1, r: 2 },
+      { w: 'partial',       z: 2, r: 2 },
+      { w: 'inconsistent',  z: 2, r: 2 },
+      { w: 'flawed',        z: 2, r: 2 },
+      { w: 'neutral',       z: 3, r: 1 },
+      { w: 'reasonable',    z: 3, r: 2 },
+      { w: 'balanced',      z: 3, r: 2 },
+      { w: 'fair',          z: 4, r: 1 },
+      { w: 'impartial',     z: 4, r: 3 },
+      { w: 'principled',    z: 4, r: 3 },
+      { w: 'just',          z: 4, r: 2 },
+      { w: 'righteous',     z: 5, r: 3 },
+      { w: 'scrupulous',    z: 5, r: 4 },
+      { w: 'unblemished',   z: 5, r: 4 },
+      { w: 'incorruptible', z: 5, r: 5 },
+    ]
+  },
+
+  // ── SPEED OF CHANGE (adj) ─────────────────────────────────
+  {
+    id: 'change',
+    category: 'Change',
+    type: 'adj',
+    left: 'stagnant',
+    right: 'volatile',
+    words: [
+      { w: 'static',        z: 1, r: 2 },
+      { w: 'frozen',        z: 1, r: 2 },
+      { w: 'immovable',     z: 1, r: 3 },
+      { w: 'entrenched',    z: 1, r: 4 },
+      { w: 'slow',          z: 2, r: 1 },
+      { w: 'gradual',       z: 2, r: 2 },
+      { w: 'incremental',   z: 2, r: 3 },
+      { w: 'moderate',      z: 3, r: 1 },
+      { w: 'evolving',      z: 3, r: 2 },
+      { w: 'shifting',      z: 3, r: 2 },
+      { w: 'rapid',         z: 4, r: 2 },
+      { w: 'turbulent',     z: 4, r: 3 },
+      { w: 'unpredictable', z: 4, r: 2 },
+      { w: 'convulsive',    z: 5, r: 4 },
+      { w: 'tumultuous',    z: 5, r: 4 },
+      { w: 'cataclysmic',   z: 5, r: 5 },
+    ]
+  },
+
+  // ── GENEROSITY (adj) ──────────────────────────────────────
+  {
+    id: 'generosity',
+    category: 'Generosity',
+    type: 'adj',
+    left: 'miserly',
+    right: 'lavish',
+    words: [
+      { w: 'stingy',        z: 1, r: 2 },
+      { w: 'tight-fisted',  z: 1, r: 3 },
+      { w: 'parsimonious',  z: 1, r: 5 },
+      { w: 'frugal',        z: 2, r: 3 },
+      { w: 'careful',       z: 2, r: 1 },
+      { w: 'modest',        z: 3, r: 2 },
+      { w: 'adequate',      z: 3, r: 2 },
+      { w: 'willing',       z: 3, r: 1 },
+      { w: 'generous',      z: 4, r: 2 },
+      { w: 'charitable',    z: 4, r: 2 },
+      { w: 'bountiful',     z: 4, r: 3 },
+      { w: 'magnanimous',   z: 5, r: 4 },
+      { w: 'extravagant',   z: 5, r: 3 },
+      { w: 'profligate',    z: 5, r: 5 },
+      { w: 'munificent',    z: 5, r: 5 },
     ]
   },
 

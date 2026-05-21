@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Play — Semantic Gradient</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="player-body">
+
+  <!-- ── JOIN ──────────────────────────────────────────── -->
+  <div id="screen-join" class="screen active">
+    <div class="screen-inner narrow player-narrow">
+      <div class="logo-row centered">
+        <div class="logo-bar small"></div>
+        <span class="logo-text">Semantic Gradient</span>
+      </div>
+      <div class="card join-card">
+        <h2>Join a game</h2>
+        <div class="field">
+          <label>Room code</label>
+          <input type="text" id="j-code" placeholder="e.g. ABC12" maxlength="5"
+            oninput="this.value=this.value.toUpperCase()" autocomplete="off" autocapitalize="characters">
+        </div>
+        <div class="field">
+          <label>Your name</label>
+          <input type="text" id="j-name" placeholder="e.g. Alex" maxlength="20" autocomplete="off">
+        </div>
+        <p class="error-msg" id="j-error"></p>
+        <button class="btn btn-primary btn-wide" onclick="joinGame()">Join →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── WAITING ────────────────────────────────────────── -->
+  <div id="screen-waiting" class="screen">
+    <div class="screen-inner narrow player-narrow centered-v">
+      <div class="waiting-block">
+        <div class="pulse-dot"></div>
+        <h2 id="w-name">Hi there!</h2>
+        <p>Waiting for the host to start the game…</p>
+        <div class="player-chips" id="w-players"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── PLAYING ────────────────────────────────────────── -->
+  <div id="screen-playing" class="screen">
+    <div class="screen-inner narrow player-narrow">
+      <div class="player-game-header">
+        <div>
+          <span class="player-name-tag" id="p-name">—</span>
+          <span class="player-score-tag">Score: <strong id="p-score">0</strong></span>
+        </div>
+        <div class="timer-block sm" id="p-timer">60</div>
+      </div>
+
+      <div class="card scale-card">
+        <span class="badge badge-category" id="p-category">—</span>
+        <div class="scale-header player-scale">
+          <span class="scale-anchor anchor-left" id="p-left">—</span>
+          <div class="scale-line"></div>
+          <span class="scale-anchor anchor-right" id="p-right">—</span>
+        </div>
+      </div>
+
+      <div class="input-row">
+        <input type="text" id="p-input" placeholder="Type a word…"
+          autocomplete="off" autocapitalize="off" spellcheck="false"
+          onkeydown="if(event.key==='Enter')submitWord()">
+        <button class="btn btn-primary" onclick="submitWord()">Go</button>
+      </div>
+
+      <div class="feedback-bar" id="p-feedback"></div>
+
+      <div class="submitted-list" id="p-words"></div>
+    </div>
+  </div>
+
+  <!-- ── ROUND END ─────────────────────────────────────── -->
+  <div id="screen-roundend" class="screen">
+    <div class="screen-inner narrow player-narrow">
+      <h2 id="pre-title">Round done!</h2>
+      <div class="round-summary card">
+        <p class="summary-label">Your words this round</p>
+        <div id="pre-words"></div>
+        <div class="round-score-row">
+          <span>Round score</span>
+          <strong id="pre-round-score">0</strong>
+        </div>
+        <div class="round-score-row total">
+          <span>Total score</span>
+          <strong id="pre-total-score">0</strong>
+        </div>
+      </div>
+      <div class="scoreboard" id="pre-scoreboard"></div>
+      <p class="waiting-next" id="pre-waiting">Waiting for host…</p>
+    </div>
+  </div>
+
+  <!-- ── GAME END ───────────────────────────────────────── -->
+  <div id="screen-gameend" class="screen">
+    <div class="screen-inner narrow player-narrow centered-v">
+      <div class="final-header">
+        <div class="trophy">🏆</div>
+        <h1>Game over!</h1>
+      </div>
+      <div class="scoreboard" id="pge-scoreboard"></div>
+      <button class="btn btn-primary btn-wide" onclick="location.href='/'">Play again</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/player.js"></script>
+</body>
+</html>

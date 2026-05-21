@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Host — Semantic Gradient</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- ── SETUP ─────────────────────────────────────────── -->
+  <div id="screen-setup" class="screen active">
+    <div class="screen-inner narrow">
+      <div class="logo-row">
+        <div class="logo-bar small"></div>
+        <span class="logo-text">Semantic Gradient</span>
+        <span class="badge badge-host">Host</span>
+      </div>
+
+      <div class="card">
+        <h2>Game settings</h2>
+        <div class="field">
+          <label>Category</label>
+          <select id="s-category">
+            <option value="all">All categories (mixed)</option>
+            <option value="Size">Size</option>
+            <option value="Temperature">Temperature</option>
+            <option value="Speed">Speed</option>
+            <option value="Sound">Sound</option>
+            <option value="Happiness">Happiness</option>
+            <option value="Light">Light</option>
+            <option value="Movement">Movement</option>
+            <option value="Courage">Courage</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Rounds <span id="rounds-val" class="field-val">5</span></label>
+          <input type="range" id="s-rounds" min="1" max="10" value="5" oninput="document.getElementById('rounds-val').textContent=this.value">
+        </div>
+        <div class="field">
+          <label>Time per round <span id="time-val" class="field-val">60s</span></label>
+          <input type="range" id="s-time" min="30" max="120" step="10" value="60" oninput="document.getElementById('time-val').textContent=this.value+'s'">
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn-primary btn-lg" onclick="createRoom()">Create room</button>
+        <button class="btn btn-ghost" onclick="showPreview()">Preview scales</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── PREVIEW ───────────────────────────────────────── -->
+  <div id="screen-preview" class="screen">
+    <div class="screen-inner">
+      <div class="top-bar">
+        <button class="btn btn-ghost" onclick="show('setup')">← Back</button>
+        <h2>All scales</h2>
+        <div></div>
+      </div>
+      <div id="preview-list" class="preview-grid"></div>
+    </div>
+  </div>
+
+  <!-- ── LOBBY ─────────────────────────────────────────── -->
+  <div id="screen-lobby" class="screen">
+    <div class="screen-inner lobby-layout">
+      <div class="lobby-code-block">
+        <p class="lobby-label">Room code</p>
+        <div class="lobby-code" id="lobby-code">—</div>
+        <p class="lobby-sub">Players go to <strong id="lobby-url"></strong> and enter this code</p>
+      </div>
+
+      <div class="lobby-players-block">
+        <div class="lobby-players-header">
+          <h3>Players joined <span id="lobby-count" class="badge badge-blue">0</span></h3>
+        </div>
+        <div id="lobby-player-list" class="player-chips"></div>
+      </div>
+
+      <button class="btn btn-primary btn-lg btn-wide" id="start-btn" onclick="startGame()" disabled>
+        Start game (need at least 1 player)
+      </button>
+    </div>
+  </div>
+
+  <!-- ── PLAYING ────────────────────────────────────────── -->
+  <div id="screen-playing" class="screen">
+    <div class="screen-inner">
+      <div class="game-header">
+        <div class="game-meta">
+          <span class="badge badge-category" id="g-category">—</span>
+          <span class="game-round" id="g-round">Round 1</span>
+        </div>
+        <div class="timer-block" id="g-timer">60</div>
+        <button class="btn btn-danger btn-sm" onclick="endRoundEarly()">End round</button>
+      </div>
+
+      <div class="scale-header">
+        <span class="scale-anchor anchor-left" id="g-left">—</span>
+        <div class="scale-arrow">← scale →</div>
+        <span class="scale-anchor anchor-right" id="g-right">—</span>
+      </div>
+
+      <div class="zones-row" id="g-zones">
+        <div class="zone" data-zone="1"><span class="zone-num">1</span></div>
+        <div class="zone" data-zone="2"><span class="zone-num">2</span></div>
+        <div class="zone" data-zone="3"><span class="zone-num">3</span></div>
+        <div class="zone" data-zone="4"><span class="zone-num">4</span></div>
+        <div class="zone" data-zone="5"><span class="zone-num">5</span></div>
+      </div>
+
+      <div class="scoreboard-section">
+        <h3>Live scores</h3>
+        <div id="g-scoreboard" class="scoreboard"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── ROUND END ─────────────────────────────────────── -->
+  <div id="screen-roundend" class="screen">
+    <div class="screen-inner">
+      <div class="top-bar">
+        <h2 id="re-title">Round 1 results</h2>
+        <button class="btn btn-primary" id="re-next-btn" onclick="nextRound()">Next round →</button>
+      </div>
+
+      <div class="card">
+        <div class="scale-header small">
+          <span class="scale-anchor anchor-left" id="re-left">—</span>
+          <div class="scale-arrow">complete scale</div>
+          <span class="scale-anchor anchor-right" id="re-right">—</span>
+        </div>
+        <div class="zones-row" id="re-zones"></div>
+        <p class="missed-rare" id="re-missed"></p>
+      </div>
+
+      <h3 style="margin: 1.25rem 0 0.75rem">Scoreboard</h3>
+      <div id="re-scoreboard" class="scoreboard"></div>
+    </div>
+  </div>
+
+  <!-- ── GAME END ───────────────────────────────────────── -->
+  <div id="screen-gameend" class="screen">
+    <div class="screen-inner narrow">
+      <div class="final-header">
+        <div class="trophy">🏆</div>
+        <h1>Final scores</h1>
+      </div>
+      <div id="ge-scoreboard" class="scoreboard final-scoreboard"></div>
+      <button class="btn btn-primary btn-lg btn-wide" onclick="location.href='/'">Play again</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/host.js"></script>
+</body>
+</html>

@@ -185,7 +185,10 @@
         <h1>Final scores</h1>
       </div>
       <div id="ge-scoreboard" class="scoreboard final-scoreboard"></div>
-      <button class="btn btn-primary btn-lg btn-wide" onclick="location.href='/'">Play again</button>
+      <div style="display:flex;gap:10px;margin-top:1rem">
+        <button class="btn btn-primary btn-lg" style="flex:1" onclick="playAgain()">Play again (same players)</button>
+        <button class="btn btn-ghost btn-lg" onclick="location.href='/'">New game</button>
+      </div>
     </div>
   </div>
 

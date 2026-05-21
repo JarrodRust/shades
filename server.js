@@ -256,6 +256,42 @@ io.on('connection', (socket) => {
     });
   });
 
+
+  // Host resets game for another round with same players
+  socket.on('playAgain', ({ code, settings }, cb) => {
+    const room = rooms[code];
+    if (!room || room.hostId !== socket.id) return;
+
+    // Reset scores
+    Object.values(room.players).forEach(p => {
+      p.score = 0;
+      p.roundScore = 0;
+      p.roundWords = [];
+    });
+
+    // Build new scale list
+    const scalePool = settings.category === 'all'
+      ? [...SCALES]
+      : SCALES.filter(s => s.category.toLowerCase() === settings.category.toLowerCase());
+    const shuffled = scalePool.sort(() => Math.random() - 0.5);
+    const scales = [];
+    while (scales.length < settings.rounds) scales.push(...shuffled);
+
+    room.settings = { rounds: settings.rounds, roundTime: settings.roundTime };
+    room.scales = scales.slice(0, settings.rounds);
+    room.currentRound = 0;
+    room.phase = 'lobby';
+    room.usedWords = new Set();
+    if (room.timer) { clearInterval(room.timer); room.timer = null; }
+
+    // Tell everyone we're back in the lobby
+    io.to(code).emit('backToLobby', {
+      players: Object.values(room.players).map(p => p.name),
+    });
+
+    cb({ ok: true });
+  });
+
   // Disconnect cleanup
   socket.on('disconnect', () => {
     const code = socket.data.roomCode;

@@ -163,6 +163,17 @@ socket.on('gameEnd', ({ scoreboard }) => {
   show('gameend');
 });
 
+// ── Back to lobby (play again)
+socket.on('backToLobby', ({ players }) => {
+  myScore = 0;
+  myRoundScore = 0;
+  myRoundWords = [];
+  document.getElementById('w-players').innerHTML =
+    players.map(n => `<span class="player-chip">${n}</span>`).join('');
+  document.getElementById('w-name').textContent = `Hi, ${myName}!`;
+  show('waiting');
+});
+
 // ── Host left ─────────────────────────────────────────────────
 socket.on('hostLeft', () => {
   alert('The host has ended the game.');

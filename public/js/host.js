@@ -179,6 +179,25 @@ function nextRound() {
 }
 
 // ── Game end ─────────────────────────────────────────────────
+socket.on('backToLobby', ({ players }) => {
+  renderLobbyPlayers(players);
+  const btn = document.getElementById('start-btn');
+  btn.disabled = false;
+  btn.textContent = `Start game — ${players.length} player${players.length > 1 ? 's' : ''} ready`;
+  show('lobby');
+});
+
+function playAgain() {
+  const settings = {
+    category: document.getElementById('s-category').value,
+    rounds:   parseInt(document.getElementById('s-rounds').value),
+    roundTime:parseInt(document.getElementById('s-time').value),
+  };
+  socket.emit('playAgain', { code: roomCode, settings }, (res) => {
+    if (res.ok) show('lobby');
+  });
+}
+
 socket.on('gameEnd', ({ scoreboard }) => {
   document.getElementById('ge-scoreboard').innerHTML = scoreboard.map((p, i) => `
     <div class="score-row">
